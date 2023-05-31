@@ -8,7 +8,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: myFont, Arial, Helvetica, sans-serif !important;
+    font-family: myFont, Arial, Helvetica, sans-serif;
 }
 
 #advert {
@@ -337,16 +337,42 @@ footer h6 {
 #subIn input {
     padding: 10px;
     border: none;
-    width: 280px;
+    width: 270px;
     outline: none;
     background-color: #fff;
     color: #000;
 }
 
 #sub button {
-    width: 70px;
+    width: 72px;
+    background-color: transparent;
+    border: 2px solid #9B9B9C;
+}
+
+#sub button:hover {
+    border-color: #F68B1E;
+    color: #F68B1E;
 }
 
 address {
     font-style: italic;
 }
+
+#socialMedia {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5em;
+    font-size: 2.3em;
+}
+
+#socialMedia i {
+    color: #9B9B9C;
+}
+
+#socialMedia i:hover {
+    color: #F68B1E;
+}
+
+
+/* SignUp Page Css Start Here */
+
