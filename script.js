@@ -5,22 +5,41 @@ const signIn = () => {
 
 // Sign Up Query
 const signUpBtn = document.getElementById('signUpBtn');
+const allUser = [];
 
 signUpBtn.addEventListener('click', () => {
-  const allUser = [];
   const signUpName = document.getElementById('signUpName').value;
   const signUpEmail = document.getElementById('signUpEmail').value;
   const signUpPassword = document.getElementById('signUpPassword').value; 
-  const signUpCPassword = document.getElementById('signUpCPassword').value; 
   
-  const objUser = {
-    name: signUpName,
-    email: signUpEmail,
-    pass: signUpPassword,
-    confirmPass: signUpCPassword
-  };
+  if (signUpName != "" && signUpEmail != "" && signUpPassword !="") {
 
-  allUser.push(objUser);
+    if (signUpPassword == signUpCPassword.value) {
+      errMsgDis()
+      const objUser = {
+        name: signUpName,
+        email: signUpEmail,
+        pass: signUpPassword
+      };
+    
+      allUser.push(objUser);
+    
+      console.log(allUser);
+    } else {
+      errMsg.innerHTML = "Password do not match"
 
-  console.log(allUser);
+      setTimeout(errMsgDis, 3000)
+    }
+
+  } else {
+    errMsg.innerHTML = "* All field required"
+
+    setTimeout(errMsgDis, 3000)
+
+  }
+
 });
+
+const errMsgDis = () => {
+  errMsg.innerHTML = ""
+}

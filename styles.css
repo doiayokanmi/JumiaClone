@@ -373,6 +373,11 @@ address {
     color: #F68B1E;
 }
 
+#errMsg {
+    color: #E61601;
+    padding: 10px;
+}
+
 
 /* SignUp Page Css Start Here */
 
@@ -407,6 +412,7 @@ address {
   
   .formGroup label {
     position: absolute;
+    color: #9B9B9C;
     top: 50%;
     transform: translateY(-50%);
     left: 5px;
