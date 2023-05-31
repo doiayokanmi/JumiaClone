@@ -13,21 +13,17 @@
     <title>Sign Up for Jumia || </title>
 </head>
 <body>
-    <main class="container-fluid p-3 d-flex justify-content-center">
-        <section id="signUpMain">
+    <main class="container-fluid p-3 d-flex justify-content-center align-items-center" id="SignMainCon">
+        <section id="signInMain">
             <img src="src/favicon.87f00114.ico" alt="" width="50px" class="img-fluid mb-2">
             <h2>
-                Create Account
+                Login Page
             </h2>
 
             <p class="mb-4">
-                Welcome To Jumia Registration Page <br>
-                Use this page to create a customer account for yourself 
+                Welcome To Jumia Login Page <br>
+                Use this page to login to your account to gain access to other features 
             </p>
-            <div class="formGroup">
-                <input type="text" id="name" name="name" required placeholder=" ">
-                <label for="name"><i class="fa-solid fa-user"></i> Full Name:</label>
-            </div>
 
             <div class="formGroup">
                 <input type="email" id="email" name="email" required placeholder=" ">
@@ -39,14 +35,9 @@
                 <label for="password"><i class="fa-solid fa-lock"></i> Password:</label>
             </div>
 
-            <div class="formGroup">
-                <input type="password" id="cpassword" name="cpassword" required placeholder=" ">
-                <label for="cpassword"><i class="fa-solid fa-lock"></i> Confirm Password:</label>
-            </div>
+            <button class="mb-2" id="signInBtn">Login</button>
 
-            <button class="mb-2" id="signUpBtn">Register</button>
-
-            <p>Already have an account with us? <a href="signin.html">Login here</a></p>
+            <p>Not Yet a Customer? <a href="signup.html">Create Account here</a></p>
         </section>
     </main>
 </body>
