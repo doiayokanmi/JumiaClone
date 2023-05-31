@@ -375,4 +375,56 @@ address {
 
 
 /* SignUp Page Css Start Here */
+#signUpMain {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+}
 
+#signUpMain input {
+    width: 90%;
+}
+
+.formGroup {
+    position: relative;
+    margin-bottom: 30px;
+    width: 90%;
+    border: 1px solid #F68B1E;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .formGroup label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .formGroup input {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  
+  .formGroup input:focus + label,
+  .formGroup input:not(:placeholder-shown) + label {
+    font-size: 16px;
+    top: -15px;
+    color: #F68B1E;
+  }
+
+  #signUpMain button {
+    width: 90%;
+  }
+
+  #signUpMain a {
+    color: #F68B1E;
+    font-style: italic;
+  }
