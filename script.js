@@ -3,17 +3,28 @@ const signIn = () => {
   window.location.href = 'signin.html';
 };
 
-// Get the sign-up modal element
-var signUpModal = document.getElementById('signUpModal')
+// Get the element or Declaration section
+const signUpModal = document.getElementById('signUpModal')
+const signUpName = document.getElementById('signUpName');
+const signUpEmail = document.getElementById('signUpEmail');
+const signUpPassword = document.getElementById('signUpPassword');
+const signUpCPassword = document.getElementById('signUpCPassword');
+const signUpEmailAd = document.getElementById('signUpEmail');
+const signInBtn = document.getElementById('signInBtn');
+const signInEmail = document.getElementById('signInEmail')
+const signUpBtn = document.getElementById('signUpBtn')
+let SUpUserFound = 0;
+let SInUserFound = 0;
+//<--------------------------- Sign Up Page code start Here ---------------->
 
 // Check if there are any existing users in local storage, otherwise initialize an empty array
-var allUser;
-var LSallUser = localStorage.getItem('allUser');
-if (LSallUser) {
-  allUser = JSON.parse(LSallUser)
-} else {
-  allUser = [];
-}
+  var allUser;
+  var LSallUser = localStorage.getItem('allUser');
+  if (LSallUser) {
+    allUser = JSON.parse(LSallUser)
+  } else {
+    allUser = [];
+  }
 
 // Function to clear sign-up input fields
 const emptySignUpInput = () => {
@@ -25,11 +36,7 @@ const emptySignUpInput = () => {
 
 // Event listener for the sign-up button
 signUpBtn.addEventListener('click', () => {
-  const signUpName = document.getElementById('signUpName');
-  const signUpEmail = document.getElementById('signUpEmail');
-  const signUpPassword = document.getElementById('signUpPassword');
-  const signUpCPassword = document.getElementById('signUpCPassword');
-
+  
   // Check if all required fields are filled
   if (signUpName.value != "" && signUpEmail.value != "" && signUpPassword.value != "") {
 
@@ -43,9 +50,6 @@ signUpBtn.addEventListener('click', () => {
         email: signUpEmail.value,
         pass: signUpPassword.value
       };
-
-      let SUpUserFound = 0;
-      let signUpEmailAd = document.getElementById('signUpEmail')
 
       // Check if the user already exists
       for (let index = 0; index < allUser.length; index++) {
@@ -69,7 +73,6 @@ signUpBtn.addEventListener('click', () => {
         localStorage.setItem('allUser', LSAllUser);
 
         // Display success message and clear input fields
-        errMsg.innerHTML = `Congratulations! You are now a customer of Jumia.com.ng <br /> Click on the sign-in link below to access your account <br /> You will be redirected to the login page soon <br />`
         signUpModal.innerHTML += `Congratulations! You are now a customer of Jumia.com.ng <br /> You will be redirected to the login page soon <br /> <img src='src/Infinity-1s-83px.svg'>`
         signUpModal.style.display = "flex"
         errMsg.style.color = "green"
@@ -107,3 +110,17 @@ const errMsgDis = () => {
 const errMsgTimeOut = () => {
   setTimeout(errMsgDis, 10000)
 }
+
+
+//<--------------------------- Sign In Page code start Here ---------------->
+
+const signInProcess = () => {
+  for (let index = 0; index < allUser.length; index++) {
+    if (allUser[index].email == signInEmail.value) {
+      SInUserFound = 1
+      console.log(allUser[index]);
+    }
+  }
+}
+
+signInBtn.addEventListener('click', signInProcess)
