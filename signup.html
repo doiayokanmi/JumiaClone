@@ -20,10 +20,13 @@
                 Create Account
             </h2>
 
-            <p class="mb-4">
+            <p class="mb-1">
                 Welcome To Jumia Registration Page <br>
                 Use this page to create a customer account for yourself 
             </p>
+
+            <div id="errMsg"></div>
+
             <div class="formGroup">
                 <input type="text" id="signUpName" name="name" required placeholder=" ">
                 <label for="name"><i class="fa-solid fa-user"></i> Full Name:</label>
@@ -46,10 +49,12 @@
 
             <button class="mb-2" id="signUpBtn">Register</button>
 
-            <div id="errMsg"></div>
-
             <p>Already have an account with us? <a href="signin.html">Login here</a></p>
         </section>
+
+        <div id="signUpModal">
+            
+        </div>
     </main>
 </body>
 </html>
