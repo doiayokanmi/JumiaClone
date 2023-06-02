@@ -41,6 +41,10 @@
         width: 100%;
     }
 
+    #jumiaLogo {
+        width: 120px;
+    }
+
     #flashItem {
         justify-content: space-between;
     }
