@@ -1,0 +1,51 @@
+@media screen and (max-width:700px) {
+    :root {
+        --paddingValue: 1em;
+    }
+
+    #accDrop {
+        display: none;
+    }   
+
+    #search input {
+        width: 50%;
+    }
+
+    #asideLeft, #asideRight {
+        display: none;
+    }
+
+    main {
+        flex-basis: 100%;
+    }
+
+    #footerMini {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    #subIn {
+        width: 58%;
+    }
+
+    #subIn input {
+        width: 80%;
+    }
+
+    .productCard {
+        width: calc(100%/2.1);
+        justify-content: space-between;
+    }
+
+    #productImage img {
+        width: 100%;
+    }
+
+    #flashItem {
+        justify-content: space-between;
+    }
+
+    #signInMain, #signUpMain {
+        flex-basis: 100%;
+    }
+}

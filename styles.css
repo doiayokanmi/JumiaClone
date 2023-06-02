@@ -4,6 +4,10 @@
     src: url(src/font/FONTSPRINGDEMO-CeraRoundProRegular.woff);
 }
 
+:root {
+    --paddingValue: 1em 50px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -18,7 +22,7 @@
 }
 
 header {
-    padding: 1em 50px;
+    padding: var(--paddingValue);
     position: sticky;
     top: 0;
     z-index: 999;
@@ -126,7 +130,7 @@ button, #signIn, #liveChat, #signOut {
     display: flex;
     justify-content: space-between;
     background-color: #f1f1f2;
-    padding: 1em 50px;
+    padding: var(--paddingValue);
 }
 
 aside {
@@ -183,7 +187,7 @@ main {
 }
 
 #categories {
-    padding: 1em 50px;
+    padding: var(--paddingValue);
     background-color: #f1f1f2;
 }
 
@@ -219,7 +223,7 @@ main {
 }
 
 #topSelling, #flash {
-    padding: 1em 50px;
+    padding: var(--paddingValue);
     background-color: #f1f1f2;
 }
 
@@ -298,7 +302,7 @@ main {
 
 footer {
     background-color: #000;
-    padding: 1em 50px;
+    padding: var(--paddingValue);
 }
 
 #footerMini {
