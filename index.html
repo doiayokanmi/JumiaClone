@@ -12,7 +12,7 @@
     <link rel="icon" href="src/favicon.87f00114.ico">
     <title>Jumia</title>
 </head>
-<body>
+<body onload="userLoginCheck()">
     <div id="advert">
         <img src="src/Desktop Top Strip (TS_ADS_ORM).gif" alt="" class="img-fluid">
     </div>
@@ -35,12 +35,13 @@
     
                 <!-- Account split danger button -->
                 <div class="btn-group" id="accDrop">
-                    <button type="button" class="btn"><i class="fa-regular fa-user"></i> Account</button>
+                    <button type="button" class="btn"><i class="fa-regular fa-user"></i> <span id="accountHolder">Account</span></button>
                     <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu">
-                    <li><button class="dropdown-item" id="signIn" onclick="signIn()">Sign In</button></li>
+                    <li id="signInCon"><button class="dropdown-item" id="signIn" onclick="signIn()">Sign In</button></li>
+                    <li id="signOutCon"><button class="dropdown-item" id="signOut" onclick="signOut()">Sign Out</button></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My Account</a></li>
                     <li><a class="dropdown-item" href="#"><i class="fa-solid fa-utensils"></i> Orders</a></li>
@@ -59,7 +60,7 @@
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Send a Mail</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-hashtag"></i> Social Media</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><button class="dropdown-item" id="signIn">Live Chat</button></li>                       
+                        <li><button class="dropdown-item" id="liveChat">Live Chat</button></li>                       
                     </ul>
                 </div>
     

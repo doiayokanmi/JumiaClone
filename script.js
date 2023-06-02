@@ -13,6 +13,7 @@ const signUpEmailAd = document.getElementById('signUpEmail');
 const signInBtn = document.getElementById('signInBtn');
 const signInEmail = document.getElementById('signInEmail')
 const signUpBtn = document.getElementById('signUpBtn')
+const signUpFirstName = document.getElementById('signUpFirstName')
 let SUpUserFound = 0;
 let SInUserFound = 0;
 let SInContinue = 0
@@ -49,7 +50,8 @@ signUpBtn.addEventListener('click', () => {
       const objUser = {
         name: signUpName.value,
         email: signUpEmail.value,
-        pass: signUpPassword.value
+        pass: signUpPassword.value,
+        firstName: signUpFirstName.value
       };
 
       // Check if the user already exists
@@ -140,6 +142,9 @@ function signInContinue() {
           signInPasswordCon.style.display = 'block';
           signInContinueCon.style.display = 'none'
           signInBtnCon.style.display = 'block'
+      } else {
+        signInEmail.value = ''
+        errMsg.innerHTML = "User does not exit, create account with the link below"
       }
     }
 
@@ -156,6 +161,8 @@ function signInProcess() {
   }
 
   if (SInUserFound == 1) {
+    localStorage.setItem('currentUser', i)
+    localStorage.setItem('currentSession', 1)
     window.location.href = "index.html";
   } else {
     errMsg.innerHTML = "Wrong Password"
@@ -163,3 +170,21 @@ function signInProcess() {
 
 }
 
+function userLoginCheck() {
+  let currentSession = localStorage.getItem('currentSession');
+  const currentUser = localStorage.getItem('currentUser')
+
+  if (currentSession) {
+    if (currentSession == 1) {
+      accountHolder.innerText = `Hi, ${allUser[currentUser].firstName}`;
+      signInCon.style.display = 'none';
+      signOutCon.style.display = 'block'
+    }
+  }
+}
+
+function signOut() {
+
+  localStorage.setItem('currentSession', 0)
+  window.location.href = 'index.html'
+}

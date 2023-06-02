@@ -87,7 +87,7 @@ i {
     color: #F68B1E;
 }
 
-button, #signIn {
+button, #signIn, #liveChat, #signOut {
     background-color: #F68B1E;
     color: #fff;
     padding: 10px;
@@ -100,7 +100,7 @@ button, #signIn {
     color: #F68B1E;
 }
 
-#signIn {
+#signIn, #liveChat, #signOut {
     margin: 5px;
     max-width: 95%;
     box-shadow: 0 0 12px 0 #f1f1f2;
@@ -420,6 +420,18 @@ address {
     width: 90%;
 }
 
+#nameCon {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90%;
+}
+
+#nameCon .formGroup {
+    flex-basis: 50%;
+}
+
+
 .formGroup {
     position: relative;
     margin-bottom: 30px;
@@ -462,7 +474,7 @@ address {
   }
 
 
-  #signInPasswordCon {
+  #signInPasswordCon, #signOutCon {
     display: none;
   }
 
