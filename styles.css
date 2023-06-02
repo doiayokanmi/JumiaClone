@@ -460,3 +460,17 @@ address {
     color: #F68B1E;
     font-style: italic;
   }
+
+
+  #signInPasswordCon {
+    display: none;
+  }
+
+  #signInContinueCon {
+    width: 100%;
+  }
+
+  #signInBtnCon {
+    width: 100%;
+    display: none;
+  }

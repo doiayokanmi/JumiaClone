@@ -15,6 +15,7 @@ const signInEmail = document.getElementById('signInEmail')
 const signUpBtn = document.getElementById('signUpBtn')
 let SUpUserFound = 0;
 let SInUserFound = 0;
+let SInContinue = 0
 //<--------------------------- Sign Up Page code start Here ---------------->
 
 // Check if there are any existing users in local storage, otherwise initialize an empty array
@@ -114,13 +115,51 @@ const errMsgTimeOut = () => {
 
 //<--------------------------- Sign In Page code start Here ---------------->
 
-const signInProcess = () => {
+function signInContinue() {
   for (let index = 0; index < allUser.length; index++) {
+    // Check if the email and password match for a user
     if (allUser[index].email == signInEmail.value) {
-      SInUserFound = 1
-      console.log(allUser[index]);
+      SInContinue = 1;
+      var i = index;
     }
   }
+
+  // Check if the email field is empty
+    if (signInEmail.value == "") {
+      errMsg.innerHTML = "Enter Your Email Address";
+    } else {
+      
+      if (SInContinue == 1) {
+        errMsg.innerHTML = "";
+          console.log(allUser[i]);
+    
+          // Disable the signInEmail input field
+          signInEmail.disabled = true;
+          signInEmail.style.color = '#fff';
+          signInEmailCon.style.backgroundColor = '#9B9B9C';
+          signInPasswordCon.style.display = 'block';
+          signInContinueCon.style.display = 'none'
+          signInBtnCon.style.display = 'block'
+      }
+    }
+
 }
 
-signInBtn.addEventListener('click', signInProcess)
+function signInProcess() {
+  // Loop through the array of all users
+  for (let index = 0; index < allUser.length; index++) {
+    // Check if the email and password match for a user
+    if (allUser[index].email == signInEmail.value && allUser[index].pass == signInPassword.value) {
+      SInUserFound = 1;
+      var i = index;
+    }
+  }
+
+  if (SInUserFound == 1) {
+    window.location.href = "index.html";
+  } else {
+    errMsg.innerHTML = "Wrong Password"
+  }
+
+}
+

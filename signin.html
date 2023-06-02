@@ -25,17 +25,25 @@
                 Use this page to login to your account to gain access to other features 
             </p>
 
-            <div class="formGroup">
+            <div id="errMsg"></div>
+
+            <div class="formGroup" id="signInEmailCon">
                 <input type="email" id="signInEmail" name="email" required placeholder=" ">
                 <label for="email"><i class="fa-solid fa-envelope"></i> Email:</label>
             </div>
 
-            <div class="formGroup">
+            <div id="signInContinueCon">
+                <button id="signContinue" class="mb-2" onclick="signInContinue()">Continue</button>
+            </div>
+
+            <div class="formGroup" id="signInPasswordCon">
                 <input type="password" id="signInPassword" name="password" required placeholder=" ">
                 <label for="password"><i class="fa-solid fa-lock"></i> Password:</label>
             </div>
 
-            <button class="mb-2" id="signInBtn">Login</button>
+            <div id="signInBtnCon">
+                <button class="mb-2" id="signInBtn" onclick="signInProcess()">Login</button>
+            </div>
 
             <p>Not Yet a Customer? <a href="signup.html">Create Account here</a></p>
         </section>
