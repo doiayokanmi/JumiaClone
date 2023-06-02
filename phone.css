@@ -52,4 +52,16 @@
     #signInMain, #signUpMain {
         flex-basis: 100%;
     }
+
+    #innerCat {
+        justify-content: space-between;
+    }
+
+    #innerCat a {
+        width: calc(100%/3.4);
+    }
+
+    #innerCat a img {
+        width: 100%;
+    }
 }
