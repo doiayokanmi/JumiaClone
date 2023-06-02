@@ -37,6 +37,11 @@
         margin-left: 5px;
     }
 
+    #cartMenuBar {
+        display: flex;
+        justify-content: space-between;
+    }
+
     #footerMini {
         flex-direction: column;
         gap: 2em;
