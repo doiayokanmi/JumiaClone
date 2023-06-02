@@ -7,6 +7,10 @@
         display: none;
     }   
 
+    #search {
+        padding: 5px;
+    }
+
     #search input {
         width: 50%;
     }
