@@ -100,6 +100,10 @@ button, #signIn, #liveChat, #signOut {
     text-align: center;
 }
 
+#menuBar {
+    display: none;
+}
+
 #accDrop:hover {
     color: #F68B1E;
 }

@@ -9,7 +9,7 @@
 
     #search {
         padding: 5px;
-        width: 60%;
+        width: 70%;
     }
 
     #search input {
@@ -24,8 +24,17 @@
         display: none;
     }
 
+    #cartText {
+        display: none;
+    }
+
     main {
         flex-basis: 100%;
+    }
+
+    #menuBar {
+        display: block;
+        margin-left: 5px;
     }
 
     #footerMini {
