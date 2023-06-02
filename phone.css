@@ -9,11 +9,15 @@
 
     #search {
         padding: 5px;
-        width: 50%;
+        width: 60%;
     }
 
     #search input {
         width: 80%;
+    }
+
+    #searchBtn {
+        display: none;
     }
 
     #asideLeft, #asideRight {
