@@ -34,12 +34,7 @@
 
     #menuBar {
         display: block;
-        margin-left: 5px;
-    }
-
-    #cartMenuBar {
-        display: flex;
-        justify-content: space-between;
+        text-align: right;
     }
 
     #footerMini {
