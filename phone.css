@@ -45,7 +45,7 @@
         width: 60px;
     }
 
-    #flashItem {
+    #flashItem, #topSellingItem {
         justify-content: space-between;
     }
 

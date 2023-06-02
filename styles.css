@@ -332,8 +332,15 @@ footer h6 {
     justify-content: space-between;
 }
 
+#subBtn {
+    display: flex;
+    flex-basis: 40%;
+    gap: 1em;
+}
+
 #subIn {
     background-color: #fff;
+    flex-basis: 60%;
     border-radius: 5px;
     padding: 0 10px;
 }
@@ -341,14 +348,14 @@ footer h6 {
 #subIn input {
     padding: 10px;
     border: none;
-    width: 270px;
+    width: 80%;
     outline: none;
     background-color: #fff;
     color: #000;
 }
 
 #sub button {
-    width: 72px;
+    width: 50%;
     background-color: transparent;
     border: 2px solid #9B9B9C;
 }
