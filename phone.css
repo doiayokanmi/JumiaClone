@@ -9,7 +9,7 @@
 
     #search {
         padding: 5px;
-        width: 70%;
+        width: 75%;
     }
 
     #search input {
@@ -34,7 +34,7 @@
 
     #menuBar {
         display: block;
-        text-align: right;
+        margin-left: 1em;
     }
 
     #footerMini {
