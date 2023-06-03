@@ -173,12 +173,18 @@ function signInProcess() {
 function userLoginCheck() {
   let currentSession = localStorage.getItem('currentSession');
   const currentUser = localStorage.getItem('currentUser')
+  const accountHolderMo = document.getElementById('accountHolderMo')
 
   if (currentSession) {
     if (currentSession == 1) {
-      accountHolder.innerText = `Hi, ${allUser[currentUser].firstName}`;
+      const userFirstName = allUser[currentUser].firstName;
+
+      accountHolder.innerText = `Hi, ${userFirstName}`;
       signInCon.style.display = 'none';
       signOutCon.style.display = 'block'
+      signInMoCon.style.display = 'none';
+      signOutMoCon.style.display = 'block'
+      accountHolderMo.innerText = `Hi, ${userFirstName}`;
     }
   }
 }
@@ -190,7 +196,7 @@ function signOut() {
 }
 
 function mobileMenuOpen() {
-  mobileMenu.style.left = "-20px"
+  mobileMenu.style.left = "0px"
 }
 
 function mobileMenuClose() {

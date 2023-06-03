@@ -92,7 +92,7 @@ i {
     color: #F68B1E;
 }
 
-button, #signIn, #liveChat, #signOut {
+button, #signIn, #liveChat, #signOut, #signMoIn, #signMoOut {
     background-color: #F68B1E;
     color: #fff;
     padding: 10px;
@@ -109,10 +109,9 @@ button, #signIn, #liveChat, #signOut {
     color: #F68B1E;
 }
 
-#signIn, #liveChat, #signOut {
+#signIn, #signMoIn, #signMoOut, #liveChat, #signOut {
     margin: 5px;
     max-width: 95%;
-    box-shadow: 0 0 12px 0 #f1f1f2;
 }
 
 .dropdown-menu {
@@ -216,6 +215,10 @@ main {
     color: #9B9B9C;
     font-size: 12px;
     width: 130px;
+}
+
+#mobileMenu {
+    display: none;
 }
 
 #innerCat a p {
