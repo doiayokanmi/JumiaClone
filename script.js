@@ -188,3 +188,11 @@ function signOut() {
   localStorage.setItem('currentSession', 0)
   window.location.href = 'index.html'
 }
+
+function mobileMenuOpen() {
+  mobileMenu.style.left = "-20px"
+}
+
+function mobileMenuClose() {
+  mobileMenu.style.left = "-600px"
+}

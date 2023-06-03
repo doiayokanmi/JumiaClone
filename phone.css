@@ -82,4 +82,40 @@
     #innerCat a img {
         width: 100%;
     }
+
+    #mobileMenu {
+        display: flex;
+    }
+
+    #mobileMenu {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        left: -600px;
+        top: -4em;
+        padding: 1em;
+        transition: .5s ease-in-out;
+    }
+    
+    #mobileMenu .signInMobile {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+    
+    #mobileMenu .signInMobile li a {
+        color: #fff;
+    }
+    
+    #mobileMenu .signInMobile li {
+        list-style: none;
+        width: 100%;
+        color: #fff;
+    }
+
+    #signIn, #signOut, #liveChat {
+        
+    }
 }

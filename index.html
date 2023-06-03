@@ -67,9 +67,24 @@
     
                 <a href="#"><i class="fa-solid fa-cart-shopping"></i> <span id="cartText">Cart</span></a>
 
-                <a href="#" id="menuBar"><i class="fa-solid fa-bars"></i></a>
+                <a href="#" id="menuBar"><i class="fa-solid fa-bars" onclick="mobileMenuOpen()"></i></a>
     
             </div>
+
+            <section id="mobileMenu">
+                <ul class="signInMobile">
+                    <li><a class="dropdown-item text-end" href="#" onclick="mobileMenuClose()"><i class="fa-solid fa-close"></i></a></li>
+                    <li id="signInCon"><button class="dropdown-item" id="signIn" onclick="signIn()">Sign In</button></li>
+                    <li id="signOutCon"><button class="dropdown-item" id="signOut" onclick="signOut()">Sign Out</button></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My Account</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-utensils"></i> Orders</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-floppy-disk"></i> Saved Items</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> Help Center</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Send a Mail</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-hashtag"></i> Social Media</a></li>
+                    <li><button class="dropdown-item" id="liveChat">Live Chat</button></li>
+                </ul>
+            </section>
         </section>
     </header>
 
