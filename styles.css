@@ -508,11 +508,10 @@ address {
 
   #cartHolder {
     position: absolute;
-    top: 3em;
+    overflow-y: scroll;
+    top: 10.5em;
     right: 0;
-  }
-
-  #cartHolder {
+    z-index: 9999;
     background-color: #F68B1E;
     color: #fff;
     width: 500px;
