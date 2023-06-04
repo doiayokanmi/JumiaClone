@@ -24,7 +24,9 @@
 
     <header>
         <section id="headerSec">
-            <img src="src/jumia logo.svg" alt="" id="jumiaLogo">
+            <a href="index.html">
+                <img src="src/jumia logo.svg" alt="" id="jumiaLogo">
+            </a>
     
             <div>
                 <div id="search">
@@ -57,15 +59,19 @@
                     <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> Help Center</a></li>
+                        <li><a class="dropdown-item" href="help.html"><i class="fa-solid fa-question"></i> Help Center</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Send a Mail</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-hashtag"></i> Social Media</a></li>
+                        <li><a class="dropdown-item" href="#footerMini"><i class="fa-solid fa-hashtag"></i> Social Media</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><button class="dropdown-item" id="liveChat">Live Chat</button></li>                       
                     </ul>
                 </div>
     
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i> <span id="cartText">Cart</span></a>
+                <a href="#" class="position-relative">
+                    <span class="position-absolute top-0 start-200 translate-middle p-1 bg-danger border border-light rounded-pill">
+                    <span class="visually-hidden">New alerts</span>
+                  </span>
+                  <i class="fa-solid fa-cart-shopping"></i> <span id="cartText">Cart</span></a>
 
                 <a href="#" id="menuBar"><i class="fa-solid fa-bars" onclick="mobileMenuOpen()"></i></a>
     
@@ -86,9 +92,9 @@
             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> My Account</a></li>
             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-utensils"></i> Orders</a></li>
             <li><a class="dropdown-item" href="#"><i class="fa-regular fa-floppy-disk"></i> Saved Items</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> Help Center</a></li>
+            <li><a class="dropdown-item" href="help.html"><i class="fa-solid fa-question"></i> Help Center</a></li>
             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-envelope"></i> Send a Mail</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-hashtag"></i> Social Media</a></li>
+            <li><a class="dropdown-item" href="#footerMini" onclick="mobileMenuDisp()"><i class="fa-solid fa-hashtag"></i> Social Media</a></li>
             <li><button class="dropdown-item" id="liveChat">Live Chat</button></li>
         </ul>
     </section>

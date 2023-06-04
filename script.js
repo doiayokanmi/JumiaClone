@@ -140,6 +140,7 @@ function signInContinue() {
           signInEmail.style.color = '#fff';
           signInEmailCon.style.backgroundColor = '#9B9B9C';
           signInPasswordCon.style.display = 'block';
+          signInPassword.focus()
           signInContinueCon.style.display = 'none'
           signInBtnCon.style.display = 'block'
       } else {
@@ -201,4 +202,8 @@ function mobileMenuOpen() {
 
 function mobileMenuClose() {
   mobileMenu.style.left = "-600px"
+}
+
+function mobileMenuDisp() {
+  mobileMenu.style.display = 'none'
 }
