@@ -505,3 +505,32 @@ address {
     width: 100%;
     display: none;
   }
+
+  #cartHolder {
+    position: absolute;
+    top: 3em;
+    right: 0;
+  }
+
+  #cartHolder {
+    background-color: #F68B1E;
+    color: #fff;
+    width: 500px;
+    transition: .3s ease-in-out;
+    right: -600px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-end;
+  }
+
+  #cartHolder ul li {
+    width: 100%;
+    list-style: none;
+    padding: 0.5em;
+    border-top: 2px solid #9B9B9C;
+  }
+
+  #cartText, i {
+    cursor: pointer;
+  }

@@ -190,6 +190,7 @@ function userLoginCheck() {
   }
 
 loadProduct()
+loadCart()
 
 }
 
@@ -233,19 +234,19 @@ function loadProduct() {
   }
 
   let productItem1 = new ProductItem(
-      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml).jpeg", "₦ 3400", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem2 = new ProductItem(
-      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 9000", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem3 = new ProductItem(
-      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 10000", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem4 = new ProductItem(
-      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 4800", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem5 = new ProductItem(
@@ -273,30 +274,40 @@ let productItem10 = new ProductItem(
 )
 
 let productItem11 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 9800", "₦ 3,500", "Fashion", false, true
 )
 
 let productItem12 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 2800", "₦ 9500", "Fashion", false, true
 )
 
 let productItem13 = new ProductItem(
-"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Mens Sports T-shirts+Pants Suit(white).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Mens Sports T-shirts+Pants Suit(white).jpeg", "₦ 3900", "₦ 3500", "Fashion", false, true
 )
 
 let productItem14 = new ProductItem(
-"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Men's Casual Light Weight Baseball Collar Jacket-Black.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Men's Casual Light Weight Baseball Collar Jacket-Black.jpeg", "₦ 800", "₦ 3500", "Fashion", false, true
 )
 
 let productItem15 = new ProductItem(
-"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 7800", "₦ 3500", "Fashion", false, true
 )
 
 let productItem16 = new ProductItem(
-"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "IPhone X 3GB RAM+64GB(Renewed)  -Black.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "IPhone X 3GB RAM+64GB(Renewed)  -Black.jpeg", "₦ 4800", "₦ 3500", "Fashion", false, true
 )
 
   allProduct.push(productItem1, productItem2,productItem3, productItem4, productItem5, productItem6,productItem7, productItem8, productItem9, productItem10, productItem11, productItem12, productItem13, productItem14,productItem15, productItem16)
+
+  if (!LSallProduct) {
+    localStorage.setItem("allProduct", JSON.stringify(allProduct))
+  }
+
+  
+
+  topSellingItem.innerHTML =  ""
+  flashItem.innerHTML = ""
+
 
   for (let index = 0; index < allProduct.length; index++) {
       if (allProduct[index].topSell == true){
@@ -319,7 +330,7 @@ let productItem16 = new ProductItem(
               </p>
         
               <div class="d-flex justify-content-between align-items-center">
-                  <input type="number" placeholder="Qty" class="w-75">
+                  <input type="text" placeholder="Qty" id="productQty${index}" class="w-75 p-1">
                   <i class="fa-solid fa-cart-plus rounded-circle" onclick="addToCart(${index})"></i>
               </div>
           </div>
@@ -345,8 +356,8 @@ let productItem16 = new ProductItem(
             </p>
       
             <div class="d-flex justify-content-between align-items-center">
-                <input type="number" placeholder="Qty" class="w-75">
-                <i class="fa-solid fa-cart-plus rounded-circle addBtn" onclick="addToCart(${index})"></i>
+                  <input type="text" placeholder="Qty" id="productQty${index}" class="w-75 p-1">
+                  <i class="fa-solid fa-cart-plus rounded-circle" onclick="addToCart(${index})"></i>
             </div>
         </div>
       </div>
@@ -355,3 +366,20 @@ let productItem16 = new ProductItem(
     }
 
 }
+
+function loadCart() {
+  cartList.innerHTML = ""
+  for (let index = 0; index < allCart.length; index++) {
+      cartList.innerHTML += `<li>${allCart[index].productName}</li>`
+      
+  }
+}
+
+function showCart() {
+  cartHolder.style.right = 0;
+}
+
+function closeCart() {
+  cartHolder.style.right = '-600px';
+}
+

@@ -68,11 +68,20 @@
                     </ul>
                 </div>
     
-                <a href="#" class="position-relative">
+                <a class="position-relative">
+
+                    <div id="cartHolder">
+                        <i class="fa-solid fa-rectangle-xmark text-light text-end fs-2" onclick="closeCart()"></i>
+
+                        <ul id="cartList">
+                            
+                        </ul>
+                    </div>
                     <span class="position-absolute top-0 start-200 translate-middle p-1 bg-danger border border-light rounded-pill">
                     <span class="visually-hidden">New alerts</span>
                   </span>
-                  <i class="fa-solid fa-cart-shopping"></i> <span id="cartText">Cart</span></a>
+                  <i class="fa-solid fa-cart-shopping" onclick="showCart()"></i> <span id="cartText" onclick="showCart()">Cart</span>
+                </a>
 
                 <a href="#" id="menuBar"><i class="fa-solid fa-bars" onclick="mobileMenuOpen()"></i></a>
     
@@ -234,14 +243,13 @@
 
     <section id="flash">
         <div id="innerFlash">
-            <h5 class="sub">Top Selling items</h5>
+            <h5 class="sub">Flash Items</h5>
 
             <div id="flashItem">
 
             </div>
         </div>
     </section>
-
 
     <footer>
         <div id="footerMini">
