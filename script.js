@@ -188,6 +188,9 @@ function userLoginCheck() {
       accountHolderMo.innerText = `Hi, ${userFirstName}`;
     }
   }
+
+loadProduct()
+
 }
 
 function signOut() {
@@ -206,4 +209,149 @@ function mobileMenuClose() {
 
 function mobileMenuDisp() {
   mobileMenu.style.display = 'none'
+}
+
+function loadProduct() {
+  var allProduct;
+  var LSallProduct = localStorage.getItem('allProduct');
+  if (LSallProduct) {
+    allProduct = JSON.parse(LSallProduct)
+  } else {
+    allProduct = [];
+  }
+
+  class ProductItem {
+      constructor (productName, productImage, price, oldPrice, category, topSell, flashSell) {
+          this.productName = productName;
+          this.productImage = productImage;
+          this.price = price;
+          this.oldPrice = oldPrice;
+          this.category = category;
+          this.topSell = topSell;
+          this.flashSell = flashSell;
+      }
+  }
+
+  let productItem1 = new ProductItem(
+      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+  )
+
+  let productItem2 = new ProductItem(
+      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+  )
+
+  let productItem3 = new ProductItem(
+      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+  )
+
+  let productItem4 = new ProductItem(
+      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+  )
+
+  let productItem5 = new ProductItem(
+    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Feng Shui Black Obsidian Wealth Bracelet.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+)
+
+let productItem6 = new ProductItem(
+    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+)
+
+let productItem7 = new ProductItem(
+    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+)
+
+let productItem8 = new ProductItem(
+    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+)
+
+let productItem9 = new ProductItem(
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+)
+
+let productItem10 = new ProductItem(
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+)
+
+let productItem11 = new ProductItem(
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+)
+
+let productItem12 = new ProductItem(
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+)
+
+let productItem13 = new ProductItem(
+"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Mens Sports T-shirts+Pants Suit(white).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+)
+
+let productItem14 = new ProductItem(
+"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Men's Casual Light Weight Baseball Collar Jacket-Black.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+)
+
+let productItem15 = new ProductItem(
+"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+)
+
+let productItem16 = new ProductItem(
+"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "IPhone X 3GB RAM+64GB(Renewed)  -Black.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+)
+
+  allProduct.push(productItem1, productItem2,productItem3, productItem4, productItem5, productItem6,productItem7, productItem8, productItem9, productItem10, productItem11, productItem12, productItem13, productItem14,productItem15, productItem16)
+
+  for (let index = 0; index < allProduct.length; index++) {
+      if (allProduct[index].topSell == true){
+          topSellingItem.innerHTML +=  `
+          <div class="productCard" id="productCard">
+          <div class="productImage">
+              <img src="src/product/${allProduct[index].productImage}" class="img-fluid" alt="">
+          </div>
+          <div class="productText">
+              <p class="productName text-truncate">
+                  ${allProduct[index].productName}
+              </p>
+        
+              <h5 class="price">
+                  ${allProduct[index].price}
+              </h5>
+        
+              <p class="oldPrice">
+                  ${allProduct[index].oldPrice}
+              </p>
+        
+              <div class="d-flex justify-content-between align-items-center">
+                  <input type="number" placeholder="Qty" class="w-75">
+                  <i class="fa-solid fa-cart-plus rounded-circle" onclick="addToCart(${index})"></i>
+              </div>
+          </div>
+        </div>
+          `
+      } else if (allProduct[index].flashSell == true) {
+        flashItem.innerHTML += `
+        <div class="productCard" id="productCard">
+        <div class="productImage">
+            <img src="src/product/${allProduct[index].productImage}" class="img-fluid" alt="">
+        </div>
+        <div class="productText">
+            <p class="productName text-truncate">
+                ${allProduct[index].productName}
+            </p>
+      
+            <h5 class="price">
+                ${allProduct[index].price}
+            </h5>
+      
+            <p class="oldPrice">
+                ${allProduct[index].oldPrice}
+            </p>
+      
+            <div class="d-flex justify-content-between align-items-center">
+                <input type="number" placeholder="Qty" class="w-75">
+                <i class="fa-solid fa-cart-plus rounded-circle addBtn" onclick="addToCart(${index})"></i>
+            </div>
+        </div>
+      </div>
+        `
+      }
+    }
+
 }
