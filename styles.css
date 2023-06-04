@@ -4,6 +4,10 @@
     src: url(src/font/FONTSPRINGDEMO-CeraRoundProRegular.woff);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --paddingValue: 1em 50px;
 }
