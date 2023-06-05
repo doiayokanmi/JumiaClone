@@ -201,6 +201,7 @@ function signOut() {
 }
 
 function mobileMenuOpen() {
+  mobileMenu.style.display = 'block'
   mobileMenu.style.left = "0px"
 }
 
