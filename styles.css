@@ -520,13 +520,16 @@ address {
   #mainProductDetails {
     flex-basis: 70%;
     display: flex;
+    justify-content: space-between;
     border-radius: 10px;
     background-color: #fff;
+    gap: 20px;
     padding: 10px;
   }
 
   #pDImage {
-    width: 300px;
+    width: min(500px);
+    max-width: 600px;
     border-radius: 5px;
   }
 

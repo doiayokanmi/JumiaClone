@@ -233,8 +233,10 @@ function loadProduct() {
       }
   }
 
+  if (!LSallProduct) {
+    
   let productItem1 = new ProductItem(
-      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml).jpeg", "₦ 3400", "₦ 3,500", "Fashion", true, false
+    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml).jpeg", "₦ 3400", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem2 = new ProductItem(
@@ -251,56 +253,55 @@ function loadProduct() {
 
   let productItem5 = new ProductItem(
     "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Feng Shui Black Obsidian Wealth Bracelet.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
-)
+  )
 
-let productItem6 = new ProductItem(
+  let productItem6 = new ProductItem(
     "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
-)
+  )
 
-let productItem7 = new ProductItem(
+  let productItem7 = new ProductItem(
     "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
-)
+  )
 
-let productItem8 = new ProductItem(
+  let productItem8 = new ProductItem(
     "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
-)
+  )
 
-let productItem9 = new ProductItem(
+  let productItem9 = new ProductItem(
   "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
-)
+  )
 
-let productItem10 = new ProductItem(
+  let productItem10 = new ProductItem(
   "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
-)
+  )
 
-let productItem11 = new ProductItem(
+  let productItem11 = new ProductItem(
   "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 9800", "₦ 3,500", "Fashion", false, true
-)
+  )
 
-let productItem12 = new ProductItem(
+  let productItem12 = new ProductItem(
   "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 2800", "₦ 9500", "Fashion", false, true
-)
+  )
 
-let productItem13 = new ProductItem(
-"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Mens Sports T-shirts+Pants Suit(white).jpeg", "₦ 3900", "₦ 3500", "Fashion", false, true
-)
+  let productItem13 = new ProductItem(
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Mens Sports T-shirts+Pants Suit(white).jpeg", "₦ 3900", "₦ 3500", "Fashion", false, true
+  )
 
-let productItem14 = new ProductItem(
-"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Men's Casual Light Weight Baseball Collar Jacket-Black.jpeg", "₦ 800", "₦ 3500", "Fashion", false, true
-)
+  let productItem14 = new ProductItem(
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Men's Casual Light Weight Baseball Collar Jacket-Black.jpeg", "₦ 800", "₦ 3500", "Fashion", false, true
+  )
 
-let productItem15 = new ProductItem(
-"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 7800", "₦ 3500", "Fashion", false, true
-)
+  let productItem15 = new ProductItem(
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 7800", "₦ 3500", "Fashion", false, true
+  )
 
-let productItem16 = new ProductItem(
-"Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "IPhone X 3GB RAM+64GB(Renewed)  -Black.jpeg", "₦ 4800", "₦ 3500", "Fashion", false, true
-)
+  let productItem16 = new ProductItem(
+  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "IPhone X 3GB RAM+64GB(Renewed)  -Black.jpeg", "₦ 4800", "₦ 3500", "Fashion", false, true
+  )
 
-  allProduct.push(productItem1, productItem2,productItem3, productItem4, productItem5, productItem6,productItem7, productItem8, productItem9, productItem10, productItem11, productItem12, productItem13, productItem14,productItem15, productItem16)
+  let allProduct1 = allProduct.push(productItem1, productItem2,productItem3, productItem4, productItem5, productItem6,productItem7, productItem8, productItem9, productItem10, productItem11, productItem12, productItem13, productItem14,productItem15, productItem16)
 
-  if (!LSallProduct) {
-    localStorage.setItem("allProduct", JSON.stringify(allProduct))
+    localStorage.setItem("allProduct", JSON.stringify(allProduct1))
   }
 
   
@@ -382,6 +383,8 @@ function loadProductDetails() {
   }
 
   console.log(LSProductDetails);
+
+  document.title = allProduct[LSProductDetails].productName;
 
   pDImage.innerHTML = `<img src="src/product/${allProduct[LSProductDetails].productImage}" class="img-fluid" alt="">`
 
