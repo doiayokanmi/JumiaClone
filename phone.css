@@ -126,8 +126,14 @@
         align-items: center;
     }
 
+    #pDImage, #pDText {
+        width: 100%;
+    }
+
     #pDImage img {
         width: 100% !important;
     }
+
+
 
 }
