@@ -126,4 +126,8 @@
         align-items: center;
     }
 
+    #pDImage img {
+        width: 100% !important;
+    }
+
 }
