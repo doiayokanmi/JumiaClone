@@ -300,9 +300,9 @@ function loadProduct() {
   "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "IPhone X 3GB RAM+64GB(Renewed)  -Black.jpeg", "₦ 4800", "₦ 3500", "Fashion", false, true
   )
 
-  let allProduct1 = allProduct.push(productItem1, productItem2,productItem3, productItem4, productItem5, productItem6,productItem7, productItem8, productItem9, productItem10, productItem11, productItem12, productItem13, productItem14,productItem15, productItem16)
+  allProduct.push(productItem1, productItem2,productItem3, productItem4, productItem5, productItem6,productItem7, productItem8, productItem9, productItem10, productItem11, productItem12, productItem13, productItem14,productItem15, productItem16)
 
-    localStorage.setItem("allProduct", JSON.stringify(allProduct1))
+    localStorage.setItem("allProduct", JSON.stringify(allProduct))
   }
 
   
