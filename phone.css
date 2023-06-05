@@ -75,6 +75,10 @@
         flex-basis: 100%;
     }
 
+    #signIn, #signUp {
+        width: 100%;
+    }
+
     #innerCat {
         justify-content: space-between;
     }
