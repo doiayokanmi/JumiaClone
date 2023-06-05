@@ -142,6 +142,8 @@
         margin-bottom: 10px;
     }
 
-
+    #asideProductDetails {
+        width: 100%;
+    }
 
 }
