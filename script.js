@@ -241,31 +241,31 @@ function loadProduct() {
   )
 
   let productItem2 = new ProductItem(
-      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 9000", "₦ 3,500", "Fashion", true, false
+      "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 9000", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem3 = new ProductItem(
-      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 10000", "₦ 3,500", "Fashion", true, false
+      "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 10000", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem4 = new ProductItem(
-      "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 4800", "₦ 3,500", "Fashion", true, false
+      "100 Cotton Short Sleeve T-Shirts Shorts Set", "100 Cotton Short Sleeve T-Shirts Shorts Set.jpeg", "₦ 4800", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem5 = new ProductItem(
-    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Feng Shui Black Obsidian Wealth Bracelet.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+    "Feng Shui Black Obsidian Wealth Bracelet", "Feng Shui Black Obsidian Wealth Bracelet.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem6 = new ProductItem(
-    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+    "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active)", "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem7 = new ProductItem(
-    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+    "Geneva Unisex Casual Wrist Watch With Bracelet- Gold", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem8 = new ProductItem(
-    "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
+    "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active)", "Fruit Lip Balm Unisex  Pink Lips Magic Cream (3Days Active).jpeg", "₦ 2,800", "₦ 3,500", "Fashion", true, false
   )
 
   let productItem9 = new ProductItem(
@@ -273,31 +273,31 @@ function loadProduct() {
   )
 
   let productItem10 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
+  "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey", "EILIFINTE B06 Casual Crossbody Shoulder Chest Bag-Grey.jpeg", "₦ 2,800", "₦ 3,500", "Fashion", false, true
   )
 
   let productItem11 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 9800", "₦ 3,500", "Fashion", false, true
+  "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C", "Eaget Flash Drive 3.0 64GB - Metal OTG Micro USB Type-C.jpeg", "₦ 9800", "₦ 3,500", "Fashion", false, true
   )
 
   let productItem12 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "100_ Cotton Short Sleeve T-Shirts +Shorts Set.jpeg", "₦ 2800", "₦ 9500", "Fashion", false, true
+  "100 Cotton Short Sleeve T-Shirts Shorts Set", "100 Cotton Short Sleeve T-Shirts Shorts Set.jpeg", "₦ 2800", "₦ 9500", "Fashion", false, true
   )
 
   let productItem13 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Mens Sports T-shirts+Pants Suit(white).jpeg", "₦ 3900", "₦ 3500", "Fashion", false, true
+  "Mens Sports T-shirts+Pants Suit(white)", "Mens Sports T-shirts+Pants Suit(white).jpeg", "₦ 3900", "₦ 3500", "Fashion", false, true
   )
 
   let productItem14 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Men's Casual Light Weight Baseball Collar Jacket-Black.jpeg", "₦ 800", "₦ 3500", "Fashion", false, true
+  "Men's Casual Light Weight Baseball Collar Jacket-Black", "Men's Casual Light Weight Baseball Collar Jacket-Black.jpeg", "₦ 800", "₦ 3500", "Fashion", false, true
   )
 
   let productItem15 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 7800", "₦ 3500", "Fashion", false, true
+  "Geneva Unisex Casual Wrist Watch With Bracelet- Gold", "Geneva Unisex Casual Wrist Watch With Bracelet- Gold.jpeg", "₦ 7800", "₦ 3500", "Fashion", false, true
   )
 
   let productItem16 = new ProductItem(
-  "Biore UV Aqua Rich Watery Essence Sunscreen SPF 50 (50ml)", "IPhone X 3GB RAM+64GB(Renewed)  -Black.jpeg", "₦ 4800", "₦ 3500", "Fashion", false, true
+  "IPhone X 3GB RAM+64GB(Renewed)  -Black", "IPhone X 3GB RAM+64GB(Renewed)  -Black.jpeg", "₦ 4800", "₦ 3500", "Fashion", false, true
   )
 
   allProduct.push(productItem1, productItem2,productItem3, productItem4, productItem5, productItem6,productItem7, productItem8, productItem9, productItem10, productItem11, productItem12, productItem13, productItem14,productItem15, productItem16)
@@ -388,6 +388,21 @@ function loadProductDetails() {
   document.title = allProduct[LSProductDetails].productName;
 
   pDImage.innerHTML = `<img src="src/product/${allProduct[LSProductDetails].productImage}" class="img-fluid" alt="">`
+
+  pDText.innerHTML = `
+    <h5>
+      ${allProduct[LSProductDetails].productName}
+    </h5>
+    <small>Good Quality</small> <br>
+    <img src="src/138x18.png" alt="">
+    <hr>
+    <h4 class="fw-bolder">${allProduct[LSProductDetails].price}</h4>
+    <span class="oldPrice">${allProduct[LSProductDetails].oldPrice}</span> <br>
+    <input type="number" class="p-1 m-1" placeholder="Enter Quantity"><small>In stock</small>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laboriosam veritatis iste aliquid ab at nesciunt repellendus incidunt blanditiis impedit, sit quam omnis error debitis quibusdam natus tempora sint assumenda.</p>
+    <button class="w-100"><i class="fa-solid fa-cart-plus text-light"></i> Add To Cart</button>
+  `
 
   userLoginCheck()
 }
