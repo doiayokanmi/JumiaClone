@@ -317,9 +317,11 @@ let productItem16 = new ProductItem(
               <img src="src/product/${allProduct[index].productImage}" class="img-fluid" alt="">
           </div>
           <div class="productText">
-              <p class="productName text-truncate">
-                  ${allProduct[index].productName}
-              </p>
+              <a href="productDetails.html" onclick="currentProductDet(${index})">
+                <p class="productName text-truncate">
+                    ${allProduct[index].productName}
+                </p>
+              </a>
         
               <h5 class="price">
                   ${allProduct[index].price}
@@ -328,24 +330,20 @@ let productItem16 = new ProductItem(
               <p class="oldPrice">
                   ${allProduct[index].oldPrice}
               </p>
-        
-              <div class="d-flex justify-content-between align-items-center">
-                  <input type="text" placeholder="Qty" id="productQty${index}" class="w-75 p-1">
-                  <i class="fa-solid fa-cart-plus rounded-circle" onclick="addToCart(${index})"></i>
-              </div>
           </div>
         </div>
           `
       } else if (allProduct[index].flashSell == true) {
-        flashItem.innerHTML += `
-        <div class="productCard" id="productCard">
+        flashItem.innerHTML += `<div class="productCard" id="productCard">
         <div class="productImage">
             <img src="src/product/${allProduct[index].productImage}" class="img-fluid" alt="">
         </div>
         <div class="productText">
-            <p class="productName text-truncate">
-                ${allProduct[index].productName}
-            </p>
+            <a href="productDetails.html" onclick="currentProductDet(${index})">
+              <p class="productName text-truncate">
+                  ${allProduct[index].productName}
+              </p>
+            </a>
       
             <h5 class="price">
                 ${allProduct[index].price}
@@ -354,11 +352,6 @@ let productItem16 = new ProductItem(
             <p class="oldPrice">
                 ${allProduct[index].oldPrice}
             </p>
-      
-            <div class="d-flex justify-content-between align-items-center">
-                  <input type="text" placeholder="Qty" id="productQty${index}" class="w-75 p-1">
-                  <i class="fa-solid fa-cart-plus rounded-circle" onclick="addToCart(${index})"></i>
-            </div>
         </div>
       </div>
         `
@@ -375,11 +368,23 @@ function loadCart() {
   }
 }
 
-function showCart() {
-  cartHolder.style.right = 0;
+function currentProductDet(index) {
+  localStorage.setItem("currentProduct", index)
 }
 
-function closeCart() {
-  cartHolder.style.right = '-600px';
+function loadProductDetails() {
+  const LSProductDetails = localStorage.getItem('currentProduct');
+
+  var allProduct;
+  var LSallProduct = localStorage.getItem('allProduct');
+  if (LSallProduct) {
+    allProduct = JSON.parse(LSallProduct)
+  }
+
+  console.log(LSProductDetails);
+
+  pDImage.innerHTML = `<img src="src/product/${allProduct[LSProductDetails].productImage}" class="img-fluid" alt="">`
+
+  userLoginCheck()
 }
 

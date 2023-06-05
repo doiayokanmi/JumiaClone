@@ -8,6 +8,13 @@ body {
     overflow-x: hidden;
 }
 
+
+#cartCon {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x:auto;
+}
+
 :root {
     --paddingValue: 1em 50px;
 }
@@ -510,30 +517,31 @@ address {
     display: none;
   }
 
-  #cartHolder {
-    position: absolute;
-    overflow-y: scroll;
-    top: 10.5em;
-    right: 0;
-    z-index: 9999;
-    background-color: #F68B1E;
-    color: #fff;
-    width: 500px;
-    transition: .3s ease-in-out;
-    right: -600px;
+  #mainProductDetails {
+    flex-basis: 70%;
     display: flex;
-    flex-direction: column;
+    border-radius: 10px;
+    background-color: #fff;
     padding: 10px;
-    justify-content: flex-end;
   }
 
-  #cartHolder ul li {
+  #pDImage {
+    width: 300px;
+    border-radius: 5px;
+  }
+
+  #pDImage img {
     width: 100%;
-    list-style: none;
-    padding: 0.5em;
-    border-top: 2px solid #9B9B9C;
+    border-radius: 5px;
   }
 
-  #cartText, i {
-    cursor: pointer;
+  #pDText {
+    padding: 0 10px;
+  }
+
+  #asideProductDetails {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    flex-basis: 28%;
   }
