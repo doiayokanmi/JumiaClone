@@ -120,8 +120,10 @@
         color: #fff;
     }
 
-    #cartHolder {
-        width: 100vw;
+    #mainProductDetails, #mainCon {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 }
