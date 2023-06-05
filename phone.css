@@ -124,14 +124,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 10px;
     }
 
     #pDImage, #pDText {
         width: 100%;
+        margin-bottom: 10px;
+
     }
 
     #pDImage img {
         width: 100% !important;
+        margin-bottom: 10px;
     }
 
 
