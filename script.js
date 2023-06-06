@@ -362,14 +362,6 @@ function loadProduct() {
 
 }
 
-function loadCart() {
-  cartList.innerHTML = ""
-  for (let index = 0; index < allCart.length; index++) {
-      cartList.innerHTML += `<li>${allCart[index].productName}</li>`
-      
-  }
-}
-
 function currentProductDet(index) {
   localStorage.setItem("currentProduct", index)
 }
@@ -398,12 +390,13 @@ function loadProductDetails() {
     <hr>
     <h4 class="fw-bolder">${allProduct[LSProductDetails].price}</h4>
     <span class="oldPrice">${allProduct[LSProductDetails].oldPrice}</span> <br>
-    <input type="number" class="p-1 m-1" placeholder="Enter Quantity"><small>In stock</small>
+    <input type="number" class="p-1 m-1" placeholder="Enter Quantity" id="productQty${LSProductDetails}"><small>In stock</small>
     <hr>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laboriosam veritatis iste aliquid ab at nesciunt repellendus incidunt blanditiis impedit, sit quam omnis error debitis quibusdam natus tempora sint assumenda.</p>
-    <button class="w-100"><i class="fa-solid fa-cart-plus text-light"></i> Add To Cart</button>
+    <button class="w-100" onclick="addToCart(${LSProductDetails})"><i class="fa-solid fa-cart-plus text-light"></i> Add To Cart</button>
   `
 
   userLoginCheck()
+  loadCart()
 }
 

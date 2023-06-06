@@ -38,10 +38,11 @@ function addToCart(index) {
   }
 }
 
+const asideProductDetails = document.getElementById("asideProductDetails")
+
 function loadCart() {
-  var cartList = ""; // Initialize cartList variable
-  cartList.innerHTML = ""
+  asideProductDetails.innerHTML = ""
   for (var index = 0; index < allCart.length; index++) {
-    cartList.innerHTML += `<li>${allCart[index].productName}</li>`;
+    asideProductDetails.innerHTML += `<div class="p-2">${allCart[index].productName}</div>`;
   }
 }

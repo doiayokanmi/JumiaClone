@@ -528,8 +528,8 @@ address {
   }
 
   #pDImage {
-    width: min(500px);
-    max-width: 600px;
+    flex-basis: 40%;
+
     border-radius: 5px;
   }
 
@@ -539,6 +539,7 @@ address {
   }
 
   #pDText {
+    flex-basis: 60%;
     padding: 0 10px;
   }
 
