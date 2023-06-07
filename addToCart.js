@@ -32,7 +32,13 @@ function addToCart(index) {
     allCart.push(cartItem);
 
     localStorage.setItem('allCart', JSON.stringify(allCart));
+    alertCon.innerHTML = "Successfully added to cart"
+    alertCon.style.display = 'block'
 
+    setTimeout(function() {
+      alertCon.style.display = "none";
+    }, 2000);
+    
     console.log(allCart);
     loadCart();
   }
