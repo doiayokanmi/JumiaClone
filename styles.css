@@ -552,8 +552,8 @@ address {
 
   #alertCon {
     position: fixed;
-    top: 0;
+    top: -400px;
     z-index: 8899;
     width: 100vw;
-    display: none;
+    transition: .3s ease-in-out;
   }
